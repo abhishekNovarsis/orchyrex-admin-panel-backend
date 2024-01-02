@@ -1,5 +1,7 @@
 package com.main.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,13 +18,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "fabric_details")
+@Document(collection = "fabric_details")
 public class FabricDetail {
 
 	@Id
-	@GeneratedValue
-	private Long id;
+	private String id;
 	private String fabricType;
 	private String fabricColor;
 	private String fabricPattern;

@@ -1,5 +1,7 @@
 package com.main.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,13 +18,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "finished_product_details")
+@Document(collection = "finished_product_details")
 public class FinishedProductDetail {
 
 	@Id
-	@GeneratedValue
-	private Long finishedProductId;
+	private String finishedProductId;
 	private int sizeS;
 	private int sizeM;
 	private int sizeL;

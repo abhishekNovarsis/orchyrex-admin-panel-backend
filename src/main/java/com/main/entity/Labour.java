@@ -1,5 +1,7 @@
 package com.main.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -12,11 +14,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@Document(collection = "labour")
 public class Labour {
 	@Id
-	@GeneratedValue
-	private Long id;
+	private String id;
 	private String labourerName;
 	private String date;
 	private String typeOfWork;

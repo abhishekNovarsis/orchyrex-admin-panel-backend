@@ -1,6 +1,7 @@
 package com.main.entity;
 
-import jakarta.persistence.Entity;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -12,11 +13,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@Document(collection = "distibutors")
 public class Distributor {
 	@Id
-	@GeneratedValue
-	private long id;
+	private String id;
 	private String distributorName;
 	private String distributorAddress;
 	private String distributorContact;

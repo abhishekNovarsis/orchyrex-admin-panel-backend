@@ -23,7 +23,7 @@ public class UserServiceImplementation implements UserService {
 	}
 
 	@Override
-	public User findUserById(Long userId) throws UserException {
+	public User findUserById(String userId) throws UserException {
 		Optional<User> user = userRepository.findById(userId);
 
 		if (user.isPresent()) {
