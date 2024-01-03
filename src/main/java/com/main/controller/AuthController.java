@@ -27,9 +27,16 @@ import jakarta.validation.Valid;
 @RequestMapping("/auth")
 public class AuthController {
 
+	
 	private UserRepository userRepository;
+	
+	
 	private PasswordEncoder passwordEncoder;
+	
+	
 	private JwtTokenProvider jwtTokenProvider;
+	
+	
 	private CustomUserDetails customUserDetails;
 	
 	public AuthController(UserRepository userRepository,PasswordEncoder passwordEncoder,JwtTokenProvider jwtTokenProvider,CustomUserDetails customUserDetails) {
